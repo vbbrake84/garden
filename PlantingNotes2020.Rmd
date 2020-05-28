@@ -1,0 +1,55 @@
+---
+title: "Planting Notes"
+author: "Ryan Brake"
+date: "5/27/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+names <- c("plant name", "from", "location sown", "planting method", "location final", "sowing date", "transplant date", "flower or harvest date", "num_plants", "quality")
+arugula.1 <- c("arugula", "seed", "vegetable planter", "direct", "vegetable planter", "2020/4/26",NA, "2020/5/27", 6, 10)
+arugula.2 <- c("arugula", "seed", "garden - NE corner", "direct", "garden - NE corner", "2020/4/26",NA, "2020/5/27", 6, 8)
+redPepper <- c("red pepper", "seed", "vegetable planter", "direct", "vegetable planter", "2020/4/26",NA, NA, 12, NA)
+coralBells <- c("coral bells", "seed", "large terracotta planter", "direct", "planter", "2020/4/26", NA, NA, NA, NA)
+primrose <- c("primrose", "seed", "large terracotta planter", "direct", "planter", "2020/4/26", NA, NA, NA, NA)
+spanishFlag <- c("spanish flag", "seed", "rectangular window box", "direct", "rectangular window box", "2020/4/26", NA, NA, 8, NA)
+lobelia <- c("lobelia", "seed", "rectangular window box", "direct", "rectangular window box", "2020/4/26", NA, NA, 0, NA)
+cleome <- c("cleome", "seed", "tall black planter", "direct", "tall black planter", "2020/4/26", NA, NA, 0, NA)
+sage <- c("borage", "seed", "round black planter", "direct", "round black planter", "2020/5/2", NA, NA, NA, NA)
+borage <- c("sage", "seed", "round black planter", "direct", "round black planter", "2020/5/2", NA, NA, NA, NA)
+catnip <- c("catnip", "seed", "round black planter", "direct", "round black planter", "2020/5/2", NA, NA, NA, NA)
+blueboyCornflower <- c("cornflower - blueboy", "seed", "greenhouse", "direct", "planter", "2020/3/19", NA, NA, 6, 7)
+snapdragon <- c("snapdragon", "seed", "greenhouse", "direct", "round black planter", "2020/3/19", NA, NA, 15, NA)
+alyssum <- c("snapdragon", "seed", "greenhouse", "direct", "planter", "2020/3/19", NA, NA, 15, 6)
+nasturtium <- c("nasturtium", "seed", "greenhouse", "seed starter pod", "planter", "2020/3/19", NA, NA, 14, 7)
+morningglory <- c("morning glory", "seed", "greenhouse", "seed starter pod", "planter", "2020/3/19", NA, NA, 8, 10)
+sunflowers.1  <- c("nasturtium", "seed", "greenhouse", "seed starter pod", "fence - E", "2020/3/19", NA, NA, 1, 7)
+sunflowers.2  <- c("nasturtium", "seed", "greenhouse", "seed starter pod", "fence - W", "2020/3/19", NA, NA, 3, 7)
+hops <- c("hops", "rhizome", "garden - N", "direct", "garden - N", "2020/4/23", NA, NA, 1, NA)
+sweetpea <- c("sweet peas", "seed", "greenhouse", "seed starter pod", "garden - N", "2020/3/19", NA, NA, 8, 7)
+tomato <- c("tomato", "seed", "greenhouse", "seed starter pod", "garden - N", "2020/3/19", NA, NA, 7, 9)
+cucumber <- c("cucumber", "seed", "greenhouse", "seed starter pod", "tomato planter", "2020/3/19", NA, NA, 3, 6)
+cosmos <- c("cosmos", "seed", "vegetable bag", "direct", "vegetable bag", "2020/5/16", NA, NA, 15, NA)
+carrots.1 <- c("carrots", "seed", "greenhouse", "seed starter pod", "garden - N", "2020/3/19", NA, NA, NA, NA)
+carrots.2 <- c("carrots", "seed", "greenhouse", "seed starter pod", "vegetable bag", "2020/3/19", NA, NA, NA, NA)
+cilantro.1 <- c("cilantro", "seed", "greenhouse", "seed starter pod", "terracotta planter", "2020/3/19", NA, NA, 1, 8)
+cilantro.2 <- c("cilantro", "seed", "greenhouse", "seed starter pod", "round black planter", "2020/3/19", NA, NA, 1, 8)
+cilantro.3 <- c("cilantro", "seed", "greenhouse", "seed starter pod", "garden - NE corner", "2020/3/19", NA, NA, 1, 8)
+basil.1 <- c("basil", "seed", "greenhouse", "seed starter pod", "round black planter", "2020/3/19", NA, NA, 1, 5)
+basil.2 <- c("basil", "seed", "greenhouse", "seed starter pod", "garden - NE corner", "2020/3/19", NA, NA, 1, 5)
+heartleafFoam <- c("heartleaf foamflower", "young plant", NA, NA, "wooden shade box", "2020/5/9", NA, NA, 3, 8)
+
+
+as.Date('2020/4/26', format='%Y/%m/%d')
+plants <- rbind(arugula.1, arugula.2, redPepper, coralBells, primrose, spanishFlag, lobelia, cleome, sage, borage, catnip, blueboyCornflower, snapdragon, alyssum, nasturtium, sunflowers.1, sunflowers.2, hops, sweetpea, cucumber, cosmos, carrots.1, carrots.2, cilantro.1, cilantro.2, cilantro.3, basil.1, basil.2)
+colnames(plants) <- names
+
+class(plants[, "flower or harvest date"])
+
+save(plants, file="plants.Rda")
+```
+
